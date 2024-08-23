@@ -20,7 +20,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={mounment.className}>
         <main>
-          {/* <Navigation /> */}
+          <Navigation />
           {children}
         </main>
       </body>

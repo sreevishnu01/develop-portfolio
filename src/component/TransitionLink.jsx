@@ -14,7 +14,7 @@ const TransitionLink = ({ href, label }) => {
   };
 
   return (
-    <button className="text-xl text-white bg-white" onClick={handlClick}>
+    <button className="text-xl text-black uppercase" onClick={handlClick}>
       {label}
     </button>
   );
