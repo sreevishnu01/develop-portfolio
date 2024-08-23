@@ -1,10 +1,14 @@
+import LiveClock from "./customThings/LiveClock";
 import TransitionLink from "./TransitionLink";
 
 const Navigation = () => {
   return (
-    <nav className="w-full px-[70px] h-[90px] flex items-center">
-      <div className="flex gap-5">
+    <nav className="absolute top-0 w-full px-[70px] h-[90px] flex items-center">
+      <div className="w-full flex justify-between gap-5">
         <TransitionLink href="/" label="vishnu" />
+        <div className="bg-black text-white px-5 py-2 text-xs ">
+          <LiveClock />
+        </div>
       </div>
     </nav>
   );

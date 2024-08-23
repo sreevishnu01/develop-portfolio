@@ -4,7 +4,6 @@ import Navigation from "@/component/Navigation";
 import localfont from "next/font/local";
 
 const inter = Inter({ subsets: ["latin"] });
-// const rubic = IBM_Plex_Sans({ subsets: ["latin"], weight: ["400"] });
 
 const mounment = localfont({
   src: "../../public/fonts/PPMonumentExtended-Regular.otf",

@@ -87,7 +87,7 @@ p {
 .hidden-content {
   --x: 0px;
   --y: 0px;
-  --size: 15px;
+  --size: 1px;
   position: absolute;
   left: 0;
   right: 0;
