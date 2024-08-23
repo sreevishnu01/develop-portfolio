@@ -29,6 +29,11 @@ body {
   margin: 0;
 }
 
+p {
+  margin: 0px;
+  padding: 0px;
+}
+
 .wrapper {
   position: relative;
 }
@@ -145,4 +150,5 @@ body {
   mask-size: 25px; */
   pointer-events: none;
   visibility: hidden;
+  /* mix-blend-mode: difference; */
 }

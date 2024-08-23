@@ -1,8 +1,14 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Navigation from "@/component/Navigation";
+import localfont from "next/font/local";
 
 const inter = Inter({ subsets: ["latin"] });
+// const rubic = IBM_Plex_Sans({ subsets: ["latin"], weight: ["400"] });
+
+const mounment = localfont({
+  src: "../../public/fonts/PPMonumentExtended-Regular.otf",
+});
 
 export const metadata = {
   title: "Create Next App",
@@ -12,7 +18,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={mounment.className}>
         <main>
           {/* <Navigation /> */}
           {children}

@@ -1,12 +1,8 @@
 "use client";
 import React, { useEffect } from "react";
-import style from "./page.module.scss";
-import useMousePosition from "@/utils/useMousePosition";
 import gsap from "gsap";
 
 function TextMask() {
-  //   const { x, y } = useMousePosition();
-
   useEffect(() => {
     const content = document.getElementById("content");
     let linkAnimated = false;
@@ -27,7 +23,7 @@ function TextMask() {
       { "--size": 150, duration: 0.75, ease: "back.out(1.7)" } // Target value
     );
 
-    let hoveringContent = gsap.utils.toArray("p", content);
+    let hoveringContent = gsap.utils.toArray(".hiden-text", content);
 
     hoveringContent.forEach((el) => {
       el.addEventListener("mouseenter", () => {
@@ -58,32 +54,71 @@ function TextMask() {
         }
       });
     }
-    /***************************************
-          Only for the preview image
-    ***************************************/
-    // gsap.set(".mask", {
-    //   autoAlpha: 1,
-    //   "--x": window.innerWidth / 3,
-    //   "--y": window.innerHeight / 2,
-    // });
-    // tl.progress(0.2);
   }, []);
 
   return (
     <>
       <div className="h-screen">
-        <div className="content w-full h-full flex justify-center items-center text-6xl">
-          <p id="n-hover-cursor-text2" className="p-10 w-[1000px]">
-            Same text is not shown here it shows difrent text other text and we
-            can do it better
-          </p>
+        <div className="content w-full h-full flex justify-center items-center text-[90px]">
+          <div className="leading-[90px] hiden-text w-[800px] overflow-visible py-5">
+            <div>
+              <p id="n-hover-cursor-text2" className="text-sm w-fit uppercase ">
+                <span className="block pl-40">vishnu</span>
+              </p>
+            </div>
+            <div>
+              <p id="n-hover-cursor-text2" className="w-fit uppercase ">
+                <span className="block pl-20">Multi-</span>
+              </p>
+            </div>
+            <div>
+              <p id="n-hover-cursor-text2" className="w-fit uppercase">
+                <span className="block">Disciplied</span>
+              </p>
+            </div>
+            <div>
+              <p
+                id="n-hover-cursor-text2"
+                className="w-fit uppercase flex items-center gap-9"
+              >
+                <span className="pl-20">developer</span>
+                <span className="text-sm overflow-visible whitespace-nowrap hidden md:block">
+                  Good design ishonest
+                </span>
+              </p>
+            </div>
+          </div>
         </div>
 
-        <div className="hidden-content w-full h-full flex justify-center items-center text-6xl absolute top-0 text-white">
-          <p id="n-hover-cursor-text" className="p-10 w-[1000px]">
-            A text area I going to text with some aniamtion of text visbble when
-            curesier is on
-          </p>
+        <div className="hidden-content w-full h-full flex justify-center items-center text-[90px] absolute top-0 text-white">
+          <div className="leading-[90px] hiden-text w-[800px] overflow-visible">
+            <div>
+              <p id="n-hover-cursor-text2" className="text-sm w-fit uppercase ">
+                <span className="block pl-40">vishnu</span>
+              </p>
+            </div>
+            <div>
+              <p id="n-hover-cursor-text2" className="uppercase ">
+                <span className="block pl-20">talented</span>
+              </p>
+            </div>
+            <div>
+              <p id="n-hover-cursor-text2" className="uppercase">
+                <span className="block">innovative</span>
+              </p>
+            </div>
+            <div>
+              <p
+                id="n-hover-cursor-text2"
+                className="uppercase flex items-center gap-9"
+              >
+                <span className="pl-20">developer</span>
+                <span className="text-sm overflow-visible whitespace-nowrap hidden md:block">
+                  if the pay ishonest
+                </span>
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </>
