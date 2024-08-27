@@ -20,13 +20,12 @@ function LiveClock() {
   const seconds = time.getSeconds().toString().padStart(2, "0");
   const ampm = time.getHours() >= 12 ? "PM" : "AM";
 
-  const formattedTime = `${hours}:${minutes}:${seconds} `;
+  const formattedTime = `${hours}:${minutes} ${ampm} `;
 
   return (
     <>
       <div className="w-[90px] flex justify-between">
         <span>{formattedTime}</span>
-        <span>{ampm}</span>
       </div>
     </>
   );

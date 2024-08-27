@@ -20,7 +20,7 @@ function TextMask() {
     tl.fromTo(
       ".hidden-content",
       { "--size": 0 }, // Initial value
-      { "--size": 150, duration: 0.4, ese: "back.out(1.7)" } // Target value
+      { "--size": 150, duration: 0.4, ease: "back.out(1.7)" } // Target value
     );
 
     let hoveringContent = gsap.utils.toArray(".hiden-text", content);
@@ -91,7 +91,7 @@ function TextMask() {
         </div>
       </div>
 
-      <div className="hidden-content w-full h-full flex justify-center items-center text-[90px] font-bold absolute top-0 text-white">
+      <div className="hidden-content w-full h-full flex justify-center items-center text-[90px] font-black absolute top-0 text-white">
         <div className="leading-[90px] hiden-text w-[800px] overflow-visible">
           <div>
             <p id="n-hover-cursor-text2" className="text-sm w-fit uppercase ">

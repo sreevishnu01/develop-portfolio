@@ -51,7 +51,7 @@ export default function MagneticGSAP({ children, move }) {
       magnetic.current.removeEventListener("mousemove", mouseMove);
       magnetic.current.removeEventListener("mouseleave", mouseLeave);
     };
-  }, []);
+  }, [move]);
 
   return React.cloneElement(children, { ref: magnetic });
 }
