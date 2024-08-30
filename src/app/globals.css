@@ -152,3 +152,22 @@ p {
   visibility: hidden;
   /* mix-blend-mode: difference; */
 }
+
+#hanburgermenu::before {
+  content: "";
+  width: 24px;
+  height: 2px;
+  position: absolute;
+  background-color: white;
+  transform: translateY(-4px);
+  transition: all 0.3;
+  top: -2px;
+}
+
+.active span {
+  transform: rotate(45deg);
+}
+.active #hanburgermenu::before {
+  top: unset;
+  transform: rotate(-90deg);
+}

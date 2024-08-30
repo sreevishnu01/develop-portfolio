@@ -28,11 +28,11 @@ function TextMask() {
     hoveringContent.forEach((el) => {
       el.addEventListener("mouseenter", () => {
         tl.restart();
-        gsap.to("#cursor", { zIndex: -10 });
+        gsap.to("#cursor", { zIndex: -10, opacity: 0 });
       });
       el.addEventListener("mouseleave", () => {
         tl.reverse();
-        gsap.to("#cursor", { zIndex: 10, duration: 1 });
+        gsap.to("#cursor", { zIndex: 10, opacity: 0 });
       });
     });
 
