@@ -24,7 +24,7 @@ function LiveClock() {
 
   return (
     <>
-      <div className="w-[90px] flex justify-between">
+      <div className="flex justify-between">
         <span>{formattedTime}</span>
       </div>
     </>

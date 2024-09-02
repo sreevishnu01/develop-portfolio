@@ -159,15 +159,24 @@ p {
   height: 2px;
   position: absolute;
   background-color: white;
-  transform: translateY(-4px);
-  transition: all 0.3;
-  top: -2px;
+  transform: translateY(6px);
+  transition: all 0.3s ease;
+}
+#hanburgermenu::after {
+  content: "";
+  width: 24px;
+  height: 2px;
+  position: absolute;
+  background-color: white;
+  transform: translateY(-6px);
+  transition: all 0.3s ease;
 }
 
-.active span {
+.active #hanburgermenu::after {
+  top: unset;
   transform: rotate(45deg);
 }
 .active #hanburgermenu::before {
   top: unset;
-  transform: rotate(-90deg);
+  transform: rotate(-45deg);
 }

@@ -1,5 +1,6 @@
 import LiveClock from "./customThings/LiveClock";
 import TransitionLink from "./TransitionLink";
+import HamburgerMenu from "./Ui/btn/HamburgerMenu";
 
 const Navigation = () => {
   return (
@@ -16,12 +17,7 @@ const Navigation = () => {
         </div>
       </nav>
 
-      <div className="absolute w-[50px] h-[50px] bg-black rounded-full bottom-10 right-[70px]">
-        <span
-          id="hanburgermenu"
-          className="h-[2px] w-[24px] bg-white absolute inline-block top-1/2 left-1/2  transform -translate-x-1/2"
-        ></span>
-      </div>
+      <HamburgerMenu />
     </>
   );
 };
