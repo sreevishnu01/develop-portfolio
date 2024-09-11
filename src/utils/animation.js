@@ -38,3 +38,69 @@ export const animatePageOut = (href, router) => {
     });
   }
 };
+
+export const sidebarMenuSticky = () => {
+  let tl = gsap.timeline({ paused: true });
+
+  // Sidebar slide-in animation
+  tl.set(".sidenav", {
+    xPercent: 100,
+  }).to(
+    ".sidenav",
+    {
+      xPercent: 0,
+      duration: 1,
+      ease: "sine.in",
+    },
+    0
+  ); // This '0' ensures this animation starts at the same time as the next one
+
+  // Path morphing animation
+  tl.to(
+    "#start",
+    {
+      attr: {
+        d: "M100 0 L200 0 L200 1005 L100 1005 Q-100 502.5 100 0",
+        d: "M100 0 L200 0 L200 1005 L100 1005 Q100 502.5 100 0",
+      },
+      duration: 1,
+      ease: "sine.in",
+    },
+    0
+  ); // '0' here ensures this starts simultaneously with the sidebar animation
+
+  tl.restart();
+};
+
+export const sidebarMenuStickyOut = () => {
+  let tl = gsap.timeline({ paused: true });
+
+  tl.set(".sidenav", {
+    xPercent: 0,
+  }).to(
+    ".sidenav",
+    {
+      xPercent: 100,
+      duration: 1,
+      ease: "sine.in",
+    },
+    0
+  );
+
+  tl.to(
+    "#start",
+    {
+      attr: {
+        d: "M100 0 L200 0 L200 1005 L100 1005 Q100 502.5 100 0",
+        d: "M100 0 L200 0 L200 1005 L100 1005 Q-100 502.5 100 0",
+      },
+      // opacity: 0,
+      duration: 1,
+      ease: "sine.in",
+    },
+    0
+  );
+
+  tl.restart();
+  // tl.reversed();
+};
