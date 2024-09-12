@@ -44,7 +44,7 @@ export const sidebarMenuSticky = () => {
 
   // Sidebar slide-in animation
   tl.set(".sidenav", {
-    xPercent: 120,
+    xPercent: 130,
     display: "block",
   }).to(
     ".sidenav",
@@ -81,7 +81,7 @@ export const sidebarMenuStickyOut = () => {
   }).to(
     ".sidenav",
     {
-      xPercent: 120,
+      xPercent: 130,
       duration: 1,
       ease: "power3.inOut",
     },

@@ -59,7 +59,7 @@ function TextMask() {
   }, []);
 
   return (
-    <div className="h-full z-20">
+    <div className="h-full z-20 hidden md:block">
       <div className="content w-full h-full flex justify-center items-center text-[90px]">
         <div className="leading-[90px] hiden-text w-[800px] overflow-visible py-5">
           <div>
@@ -84,7 +84,7 @@ function TextMask() {
             >
               <span className="pl-20">developer</span>
               <span className="text-sm overflow-visible whitespace-nowrap hidden md:block">
-                Good design ishonest
+                Good design is honest
               </span>
             </p>
           </div>
@@ -115,7 +115,7 @@ function TextMask() {
             >
               <span className="pl-20">developer</span>
               <span className="text-sm overflow-visible whitespace-nowrap hidden md:block">
-                if the pay ishonest
+                if the pay is honest
               </span>
             </p>
           </div>

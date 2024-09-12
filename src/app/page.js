@@ -7,7 +7,9 @@ import Image from "next/image";
 export default function Home() {
   return (
     <div>
-      <Curson />
+      <div className="hidden md:block">
+        <Curson />
+      </div>
       <HeroSection />
       {/* <MyComponent /> */}
       {/* <Advanced /> */}

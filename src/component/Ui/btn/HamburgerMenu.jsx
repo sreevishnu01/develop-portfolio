@@ -27,7 +27,7 @@ function HamburgerMenu() {
         <div
           className={`${
             active && "active"
-          } fixed w-[50px] h-[50px] p-[30px] bg-white rounded-full bottom-10 right-[70px] cursor-pointer flex flex-col justify-center items-center mix-blend-difference z-[5]`}
+          } fixed w-[20px] h-[20px] md:w-[50px] md:h-[50px] p-[25px] md:p-[30px] bg-white rounded-full bottom-10 right-5 md:right-[70px] cursor-pointer flex flex-col justify-center items-center mix-blend-difference z-[5]`}
           // onClick={() => setActive((prev) => !prev)}
           onClick={handleClick}
         >
@@ -35,7 +35,7 @@ function HamburgerMenu() {
         </div>
       </MagneticGSAP>
       <>
-        <div className="hidden sidenav h-screen w-1/3 fixed top-0 right-[0px] z-[3]">
+        <div className="hidden sidenav h-screen w-full md:w-1/3 fixed top-0 right-[0px] z-[3]">
           <div className="w-full h-full p-[100px] bg-black text-white flex flex-col gap-3 justify-between">
             <div class="mt-20 flex flex-col gap-3 text-[56px] font-extralight">
               <div class="w-fit mb-10 text-xs text-[#999] border-[#999] border-b">
