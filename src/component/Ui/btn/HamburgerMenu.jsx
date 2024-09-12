@@ -30,23 +30,21 @@ function HamburgerMenu() {
           <span id="hanburgermenu" className="h-[2px] w-[24px]"></span>
         </div>
       </MagneticGSAP>
-      {/* {active && ( */}
       <>
-        <div className="sidenav h-screen w-1/3  absolute right-0 z-[3]">
-          <div className="w-full bg-black"></div>
+        <div className="hidden sidenav h-screen w-1/3 fixed top-0 right-[0px] z-[3]">
+          <div className="w-full h-full p-[100px] bg-black"></div>
           <svg
             // viewBox="0 0 705 1007"
-            className="absolute top-0 left-0 h-screen w-[100px] fill-[#292929] z-[4]"
+            className="absolute top-0 left-[-99px] h-screen w-[100px] fill-[#292929] z-[4]"
             // preserveAspectRatio="xMidYMid slice"
           >
             <path
               id="start"
-              d="M100 0 L200 0 L200 1005 L100 1005 Q100 502.5 100 0"
+              d="M100 0 L200 0 L200 1005 L100 1005 Q-100 502.5 100 0"
             ></path>
           </svg>
         </div>
       </>
-      {/* )} */}
     </div>
   );
 }

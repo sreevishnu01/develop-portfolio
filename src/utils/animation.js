@@ -44,13 +44,14 @@ export const sidebarMenuSticky = () => {
 
   // Sidebar slide-in animation
   tl.set(".sidenav", {
-    xPercent: 100,
+    xPercent: 120,
+    display: "block",
   }).to(
     ".sidenav",
     {
       xPercent: 0,
       duration: 1,
-      ease: "sine.in",
+      ease: "power3.inOut",
     },
     0
   ); // This '0' ensures this animation starts at the same time as the next one
@@ -64,7 +65,7 @@ export const sidebarMenuSticky = () => {
         d: "M100 0 L200 0 L200 1005 L100 1005 Q100 502.5 100 0",
       },
       duration: 1,
-      ease: "sine.in",
+      ease: "back.inOut",
     },
     0
   ); // '0' here ensures this starts simultaneously with the sidebar animation
@@ -80,9 +81,9 @@ export const sidebarMenuStickyOut = () => {
   }).to(
     ".sidenav",
     {
-      xPercent: 100,
+      xPercent: 120,
       duration: 1,
-      ease: "sine.in",
+      ease: "power3.inOut",
     },
     0
   );
@@ -96,7 +97,7 @@ export const sidebarMenuStickyOut = () => {
       },
       // opacity: 0,
       duration: 1,
-      ease: "sine.in",
+      ease: "back.inOut",
     },
     0
   );
