@@ -5,6 +5,7 @@ import gsap from "gsap";
 import { sidebarMenuSticky, sidebarMenuStickyOut } from "@/utils/animation";
 import { navData } from "@/utils/navigationData";
 import { usePathname } from "next/navigation";
+import TransitionLink from "@/component/TransitionLink";
 
 function HamburgerMenu() {
   const [active, setActive] = useState(false);
@@ -51,10 +52,14 @@ function HamburgerMenu() {
                       currentPath === e.path && "h-3"
                     } w-3  bg-white rounded-full absolute left-[-30px]`}
                   ></div>
-                  <p className="undeline-hover">
-                    {e.title}
-                    {/* <span class="bg-white block text-primary relative left-0 w-full h-[2px] mt-[0.3px] lineLink"></span> */}
-                  </p>
+                  <div className="undeline-hover">
+                    <TransitionLink
+                      href={e.path}
+                      label={e.title}
+                      click={() => handleClick()}
+                    />
+                  </div>
+                  {/* <p>{e.title}</p> */}
                 </div>
               ))}
             </div>

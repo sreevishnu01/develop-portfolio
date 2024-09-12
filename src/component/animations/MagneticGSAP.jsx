@@ -48,8 +48,8 @@ export default function MagneticGSAP({ children, move }) {
     magnetic.current.addEventListener("mouseleave", mouseLeave);
 
     return () => {
-      magnetic.current.removeEventListener("mousemove", mouseMove);
-      magnetic.current.removeEventListener("mouseleave", mouseLeave);
+      magnetic.current?.removeEventListener("mousemove", mouseMove);
+      magnetic.current?.removeEventListener("mouseleave", mouseLeave);
     };
   }, [move]);
 
