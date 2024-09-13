@@ -38,13 +38,13 @@ function HamburgerMenu() {
       <>
         <div className="hidden sidenav h-screen w-full md:w-1/3 fixed top-0 right-[0px] z-[3]">
           <div className="w-full h-full p-[100px] bg-black text-white flex flex-col gap-3 justify-between">
-            <div class="mt-20 flex flex-col gap-3 text-[56px] font-extralight">
-              <div class="w-fit mb-10 text-xs text-[#999] border-[#999] border-b">
+            <div className="mt-20 flex flex-col gap-3 text-[56px] font-extralight">
+              <div className="w-fit mb-10 text-xs text-[#999] border-[#999] border-b">
                 <p>Navigation</p>
               </div>
               {navData.map((e, index) => (
                 <div
-                  class="flex relative items-center"
+                  className="flex relative items-center"
                   key={"navigation" + index}
                 >
                   <div
@@ -65,12 +65,12 @@ function HamburgerMenu() {
             </div>
 
             {/* footer */}
-            <div class="md:block hidden">
-              <div class="w-fit mb-10 text-xs text-[#999] border-[#999] border-b">
+            <div className="md:block hidden">
+              <div className="w-fit mb-10 text-xs text-[#999] border-[#999] border-b">
                 <p>Get in touch</p>
               </div>
 
-              <div class="flex items-center gap-[30px] text-base">
+              <div className="flex items-center gap-[30px] text-base">
                 <div>
                   <a
                     target="_blank"
