@@ -2,7 +2,6 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Navigation from "@/component/Navigation";
 import localfont from "next/font/local";
-import Footer from "@/component/footer";
 import Curson from "@/component/Curson";
 import FooterSection from "@/component/FooterSection";
 
@@ -22,7 +21,9 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={mounment.className}>
         <main>
-          <div className="hidden md:block">{/* <Curson /> */}</div>
+          <div className="hidden md:block">
+            <Curson />
+          </div>
           <Navigation />
           {children}
           <FooterSection />
