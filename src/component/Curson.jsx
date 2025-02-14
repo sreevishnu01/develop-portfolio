@@ -6,9 +6,6 @@ function Curson() {
   useEffect(() => {
     function onFirstMove(e) {
       // Adjust for scroll position
-      const scrollX = window.scrollX;
-      const scrollY = window.scrollY;
-
       gsap.to("#cursor", {
         autoAlpha: 1,
         x: e.clientX - 50 / 2 + 30,

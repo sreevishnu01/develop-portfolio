@@ -19,15 +19,31 @@ function FooterSection() {
         <Link
           href={"https://designraver.com/"}
           className="w-fit whitespace-nowrap"
+          target="_blank"
+          rel="noopener noreferrer"
         >
           design by designraver
         </Link>
 
         <div className="flex justify-end w-full gap-10 border border-black border-t-0 rounded-lg">
-          <p>linkdin</p>
-          <p>linkdin</p>
-          <p>linkdin</p>
-          <p>vishnu@2025</p>
+          <Link
+            href="https://www.linkedin.com/in/vishnu-unni/"
+            className="w-fit whitespace-nowrap"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            LinkedIn
+          </Link>
+          <Link
+            href="https://github.com/sreevishnu01"
+            className="w-fit whitespace-nowrap"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Github
+          </Link>
+
+          <p>Vishnu Portfolio @2025</p>
         </div>
       </footer>
     </div>
