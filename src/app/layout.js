@@ -20,10 +20,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={mounment.className}>
+        <div className="hidden md:block">
+          <Curson />
+        </div>
         <main>
-          <div className="hidden md:block">
-            <Curson />
-          </div>
           <Navigation />
           {children}
           <FooterSection />
