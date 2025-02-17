@@ -9,7 +9,7 @@ const Navigation = () => {
         <div className="w-full flex justify-between gap-5">
           <TransitionLink href="/" label="vishnu" />
           <p className="cursor-pointer text-sm font-thin uppercase hidden md:block">
-            Current creative developer @ richylife club
+            Current creative developer @ richy life club
           </p>
           <div className="bg-black text-white px-5 py-2 text-xs ">
             <LiveClock />

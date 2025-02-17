@@ -7,8 +7,19 @@ import FooterSection from "@/component/FooterSection";
 
 const inter = Inter({ subsets: ["latin"] });
 
-const mounment = localfont({
-  src: "../../public/fonts/PPMonumentExtended-Regular.otf",
+const monument = localfont({
+  src: [
+    {
+      path: "../../public/fonts/PPMonumentExtended-Regular.otf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../../public/fonts/MonumentExtended-Ultrabold.otf",
+      weight: "800",
+      style: "normal",
+    },
+  ],
 });
 
 export const metadata = {
@@ -19,11 +30,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={mounment.className}>
+      <body className={`${monument.className} font-monumentUltraBold`}>
         <div className="hidden md:block">
           <Curson />
         </div>
-        <main>
+        <main className="overflow-hidden">
           <Navigation />
           {children}
           <FooterSection />

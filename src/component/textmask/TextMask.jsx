@@ -59,12 +59,12 @@ function TextMask() {
   }, []);
 
   return (
-    <div className="h-full z-20 hidden md:block">
+    <div className="h-full z-20 hidden md:block font-extrabold">
       <div className="content w-full h-full flex justify-center items-center text-[90px]">
         <div className="leading-[90px] hiden-text w-[800px] overflow-visible py-5">
           <div>
             <p id="n-hover-cursor-text2" className="text-sm w-fit uppercase ">
-              <span className="block pl-40">vishnu</span>
+              <span className="block pl-40 font-normal">vishnu</span>
             </p>
           </div>
           <div>
@@ -83,7 +83,7 @@ function TextMask() {
               className="w-fit uppercase flex items-center gap-9"
             >
               <span className="pl-20">developer</span>
-              <span className="text-sm overflow-visible whitespace-nowrap hidden md:block">
+              <span className="text-sm font-normal overflow-visible whitespace-nowrap hidden md:block">
                 Good design is honest
               </span>
             </p>
@@ -95,7 +95,7 @@ function TextMask() {
         <div className="leading-[90px] hiden-text w-[800px] overflow-visible">
           <div>
             <p id="n-hover-cursor-text2" className="text-sm w-fit uppercase ">
-              <span className="block pl-40">vishnu</span>
+              <span className="block pl-40 font-normal">vishnu</span>
             </p>
           </div>
           <div>
@@ -114,7 +114,7 @@ function TextMask() {
               className="uppercase flex items-center gap-9"
             >
               <span className="pl-20">developer</span>
-              <span className="text-sm overflow-visible whitespace-nowrap hidden md:block">
+              <span className="text-sm font-normal overflow-visible whitespace-nowrap hidden md:block">
                 if the pay is honest
               </span>
             </p>
