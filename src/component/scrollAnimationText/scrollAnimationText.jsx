@@ -38,23 +38,25 @@ export default function ScrollAnimationText() {
   return (
     <div
       ref={container}
-      className="w-full min-h-screen flex flex-col justify-center items-start text-[40px] font-extrabold px-[20px] uppercase md:hidden"
+      className="w-full h-full flex justify-center items-center"
     >
-      {textArray.map((item, i) => (
-        <div key={i} className="leading-[60px]">
-          {item.text.split("").map((letter, index) => (
-            <span
-              key={index}
-              className="inline-block opacity-20"
-              ref={(el) => refs.current.push(el)}
-            >
-              {letter}
-            </span>
-          ))}
-        </div>
-      ))}
+      <div className="w-[90%] flex flex-wrap justify-start text-[40px] font-extrabold uppercase md:hidden">
+        {textArray.map((item, i) => (
+          <div key={i} className="leading-[60px]">
+            {item.text.split("").map((letter, index) => (
+              <span
+                key={index}
+                className="inline-block opacity-20"
+                ref={(el) => refs.current.push(el)}
+              >
+                {letter}
+              </span>
+            ))}
+          </div>
+        ))}
 
-      {/* <div className="w-full h-96 relative"></div> */}
+        {/* <div className="w-full h-96 relative"></div> */}
+      </div>
     </div>
   );
 }
