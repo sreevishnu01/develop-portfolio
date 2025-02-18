@@ -23,7 +23,7 @@ function FooterSection() {
           </div>
         </div>
 
-        <footer className="flex justify-between gap-10 mt-[200px] mb-20">
+        <footer className="flex flex-col md:flex-row justify-between gap-2 md:gap-10 mt-[200px] mb-20">
           <Link
             href={"https://designraver.com/"}
             className="w-fit whitespace-nowrap"
@@ -33,7 +33,7 @@ function FooterSection() {
             design by designraver
           </Link>
 
-          <div className="flex justify-end w-full gap-10 border border-black border-t-0 rounded-lg">
+          <div className="flex justify-end w-full gap-10 md:border border-black md:border-t-0 rounded-lg text-sm md:text-base">
             <Link
               href="https://www.linkedin.com/in/vishnu-unni/"
               className="w-fit whitespace-nowrap"
@@ -51,8 +51,9 @@ function FooterSection() {
               Github
             </Link>
 
-            <p>Vishnu Portfolio @2025</p>
+            <p className="hidden md:block">Vishnu Portfolio @2025</p>
           </div>
+          <p className="block md:hidden">Vishnu Portfolio @2025</p>
         </footer>
       </div>
     </div>
