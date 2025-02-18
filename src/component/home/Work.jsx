@@ -27,19 +27,19 @@ export default function Home() {
   const [dimension, setDimension] = useState({ width: 0, height: 0 });
 
   useEffect(() => {
-    const lenis = new Lenis();
+    // const lenis = new Lenis();
 
-    const raf = (time) => {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    };
+    // const raf = (time) => {
+    //   lenis.raf(time);
+    //   requestAnimationFrame(raf);
+    // };
 
     const resize = () => {
       setDimension({ width: window.innerWidth, height: window.innerHeight });
     };
 
     window.addEventListener("resize", resize);
-    requestAnimationFrame(raf);
+    // requestAnimationFrame(raf);
     resize();
 
     return () => {
@@ -48,9 +48,10 @@ export default function Home() {
   }, []);
 
   useEffect(() => {
+    console.log(dimension.height);
     const columns = gsap.utils.toArray(`.column`);
     columns.forEach((col, i) => {
-      const speed = [2, 3.3, 1.25, 3][i]; // Matching the y transforms in Framer Motion
+      const speed = [2, 3.3, 1.25, 2][i]; // Matching the y transforms in Framer Motion
       gsap.fromTo(
         col,
         { y: 0 },
@@ -61,7 +62,8 @@ export default function Home() {
             trigger: gallery.current,
             start: "top bottom",
             end: "bottom top",
-            scrub: 1,
+            scrub: 1, // Smoother scrolling
+            invalidateOnRefresh: true, // Fixes jank on resize or refresh
           },
         }
       );
@@ -70,7 +72,7 @@ export default function Home() {
 
   return (
     <div className="overflow-hidden">
-      <div className="h-screen"></div>
+      {/* <div className="h-screen"></div> */}
       <div
         ref={gallery}
         className="relative h-[175vh] overflow-hidden bg-neutral-800 flex gap-[2vw] box-border "
