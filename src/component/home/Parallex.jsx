@@ -1,15 +1,46 @@
 "use client";
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Lenis from "@studio-freight/lenis";
+import { useTransform, useScroll, motion } from "framer-motion";
 
-gsap.registerPlugin(ScrollTrigger);
+const images = [
+  "1.jpg",
+  "2.jpg",
+  "3.jpg",
+  "4.jpg",
+  "5.jpg",
+  "6.jpg",
+  "7.jpg",
+  "8.jpg",
+  "9.jpg",
+  "10.jpg",
+  "11.jpg",
+  "12.jpg",
+];
 
-export default function Parallex() {
+export default function Home() {
   const gallery = useRef(null);
   const [dimension, setDimension] = useState({ width: 0, height: 0 });
+
+  const { scrollYProgress } = useScroll({
+    target: gallery,
+    offset: ["start end", "end start"],
+  });
+  const { height } = dimension;
+  const y = useTransform(scrollYProgress, [0, 1], [0, height * 2]);
+  const y2 = useTransform(scrollYProgress, [0, 1], [0, height * 3.3]);
+  const y3 = useTransform(scrollYProgress, [0, 1], [0, height * 1.25]);
+  const y4 = useTransform(scrollYProgress, [0, 1], [0, height * 3]);
+
   useEffect(() => {
+    // const lenis = new Lenis();
+
+    // const raf = (time) => {
+    //   lenis.raf(time);
+    //   requestAnimationFrame(raf);
+    // };
+
     const resize = () => {
       setDimension({ width: window.innerWidth, height: window.innerHeight });
     };
@@ -18,72 +49,74 @@ export default function Parallex() {
     // requestAnimationFrame(raf);
     resize();
 
-    gsap.utils.toArray("section").forEach((section, index) => {
-      const w = section.querySelector(".wrapper");
-      const [y, yEnd] =
-        index % 2
-          ? ["100%", (w.scrollHeight - section.offsetHeight) * -1]
-          : [w.scrollHeight * -1, 0];
-
-      const speed = [2, 3.3, 1.25, 3][index]; // Matching the y transforms in Framer Motion
-
-      //   const scrubSpeed = index === 0 ? 1 : index === 1 ? 2 : 0.5; // Change values as needed
-
-      gsap.fromTo(
-        w,
-        { y },
-        {
-          //   y: yEnd,
-          y: () => dimension.height * speed,
-          ease: "none",
-          scrollTrigger: {
-            trigger: gallery.current,
-            start: "top bottom",
-            end: "bottom top",
-            scrub: 1,
-            // invalidateOnRefresh: true,
-          },
-        }
-      );
-    });
-
     return () => {
       window.removeEventListener("resize", resize);
     };
-  }, [dimension.height]);
+  }, []);
+
+  console.log(dimension.width);
 
   return (
-    <main className="overflow-hidden">
-      <div className="h-[175vh] flex gap-[2vw] bg-black" ref={gallery}>
-        <section className="relative w-full h-screen bg-black">
-          <div className="wrapper space-y-4 flex flex-col gap-[2vw] top-[55%]">
-            <Image src="/images/1.jpg" width={800} height={600} alt="img" />
-            <Image src="/images/2.jpg" width={800} height={600} alt="img" />
-            <Image src="/images/3.jpg" width={800} height={600} alt="img" />
-          </div>
-        </section>
-        <section className="relative w-full h-screen">
-          <div className="wrapper space-y-4 flex flex-col gap-[2vw] top-[-125%]">
-            <Image src="/images/1.jpg" width={800} height={600} alt="img" />
-            <Image src="/images/2.jpg" width={800} height={600} alt="img" />
-            <Image src="/images/3.jpg" width={800} height={600} alt="img" />
-          </div>
-        </section>
-        <section className="relative w-full h-screen">
-          <div className="wrapper space-y-4 flex flex-col gap-[2vw] top-[55%]">
-            <Image src="/images/1.jpg" width={800} height={600} alt="img" />
-            <Image src="/images/2.jpg" width={800} height={600} alt="img" />
-            <Image src="/images/3.jpg" width={800} height={600} alt="img" />
-          </div>
-        </section>
-        <section className="relative w-full h-screen">
-          <div className="wrapper space-y-4 top-[55%]">
-            <Image src="/images/1.jpg" width={800} height={600} alt="img" />
-            <Image src="/images/2.jpg" width={800} height={600} alt="img" />
-            <Image src="/images/3.jpg" width={800} height={600} alt="img" />
-          </div>
-        </section>
+    <div className="overflow-hidden">
+      {/* <div className="h-screen"></div> */}
+      <div
+        ref={gallery}
+        className="relative h-[175vh] overflow-hidden bg-neutral-800 flex gap-[2vw] box-border "
+      >
+        <Column images={[images[0], images[1], images[2]]} index={0} y={y} />
+        <Column images={[images[3], images[4], images[5]]} index={1} y={y2} />
+
+        {dimension.width >= 600 && (
+          <>
+            <Column
+              images={[images[6], images[7], images[8]]}
+              index={2}
+              y={y3}
+            />
+            <Column
+              images={[images[9], images[10], images[11]]}
+              index={3}
+              y={y4}
+            />
+          </>
+        )}
       </div>
-    </main>
+      <div className="h-screen"></div>
+    </div>
   );
 }
+
+const Column = ({ images, index, y }) => {
+  return (
+    <motion.div
+      className={`relative h-full w-1/2 md:w-[25%] flex flex-col gap-[2vw] column ${
+        index === 0
+          ? "-top-[45%]"
+          : index === 1
+          ? "-top-[95%]"
+          : index === 2
+          ? "-top-[45%]"
+          : index === 3
+          ? "-top-[75%]"
+          : ""
+      }`}
+      style={{ y }}
+    >
+      {images.map((src, i) => {
+        return (
+          <div
+            key={i}
+            className={`relative w-full h-full rounded-[1vw] overflow-hidden `}
+          >
+            <Image
+              src={`/images/${src}`}
+              alt="image"
+              fill
+              className="object-cover"
+            />
+          </div>
+        );
+      })}
+    </motion.div>
+  );
+};

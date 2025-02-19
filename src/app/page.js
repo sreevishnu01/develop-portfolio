@@ -24,9 +24,9 @@ export default function Home() {
     <div>
       <HeroSection />
 
-      <HorizontalScroll />
+      {/* <HorizontalScroll /> */}
 
-      {/* <Parallex /> */}
+      <Parallex />
       <div className="h-screen"></div>
 
       {/* <Work /> */}
