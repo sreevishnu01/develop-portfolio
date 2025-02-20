@@ -45,19 +45,19 @@ export default function Home() {
           <h2>Ahoy!</h2>
 
           <p>
-            I'm Vishnu, a software developer and full-stack engineer passionate
+            I&apos;m Vishnu, a software developer and full-stack engineer passionate
             about building seamless digital experiences.
           </p>
           <p>
             My expertise spans both front-end and back-end development, allowing
             me to craft web applications that are not only visually appealing
-            but also scalable and high-performing. Whether it's designing sleek
+            but also scalable and high-performing. Whether it&apos;s designing sleek
             user interfaces or optimizing backend logic, I thrive on solving
             complex challenges with clean, efficient code.
           </p>
           <p>
             As a self-taught programmer, coding has never been "just a job" for
-            me—it's a continuous journey of learning and growth. What started
+            me—it&apos;s a continuous journey of learning and growth. What started
             with a simple "Hello World" has evolved into a deep passion for
             developing high-quality applications that make an impact.
           </p>
@@ -85,21 +85,22 @@ export default function Home() {
           <h2>Ahoy!</h2>
 
           <p>
-            I'm Vishnu, a software developer and full-stack engineer passionate
-            about building seamless digital experiences.
+            I&apos;m Vishnu, a software developer and full-stack engineer
+            passionate about building seamless digital experiences.
           </p>
           <p>
             My expertise spans both front-end and back-end development, allowing
             me to craft web applications that are not only visually appealing
-            but also scalable and high-performing. Whether it's designing sleek
-            user interfaces or optimizing backend logic, I thrive on solving
-            complex challenges with clean, efficient code.
+            but also scalable and high-performing. Whether it&apos;s designing
+            sleek user interfaces or optimizing backend logic, I thrive on
+            solving complex challenges with clean, efficient code.
           </p>
           <p>
-            As a self-taught programmer, coding has never been "just a job" for
-            me—it's a continuous journey of learning and growth. What started
-            with a simple "Hello World" has evolved into a deep passion for
-            developing high-quality applications that make an impact.
+            As a self-taught programmer, coding has never been &quot;just a
+            job&quot; for me—it&apos;s a continuous journey of learning and
+            growth. What started with a simple &quot;Hello World&quot; has
+            evolved into a deep passion for developing high-quality applications
+            that make an impact.
           </p>
           <p>
             With over 5 years of experience, I specialize in modern web
