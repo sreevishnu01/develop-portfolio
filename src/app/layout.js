@@ -1,11 +1,11 @@
-import { Inter } from "next/font/google";
+import { Lexend } from "next/font/google";
 import "./globals.css";
 import Navigation from "@/component/Navigation";
 import localfont from "next/font/local";
 import Curson from "@/component/Curson";
 import FooterSection from "@/component/FooterSection";
 
-const inter = Inter({ subsets: ["latin"] });
+const lexend = Lexend({ weight: "400", subsets: ["latin"] });
 
 const monument = localfont({
   src: [
@@ -30,7 +30,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${monument.className} font-monumentUltraBold`}>
+      <body
+        className={`${monument.className} ${lexend.className} font-monumentUltraBold`}
+      >
         <div className="hidden md:block">
           <Curson />
         </div>

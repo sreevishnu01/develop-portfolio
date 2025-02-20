@@ -30,7 +30,7 @@ function FooterSection() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            design by designraver
+            Inspired by designraver
           </Link>
 
           <div className="flex justify-end w-full gap-10 md:border border-black md:border-t-0 rounded-lg text-sm md:text-base">

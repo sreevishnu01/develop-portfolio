@@ -81,7 +81,6 @@ export default function Home() {
           </>
         )}
       </div>
-      <div className="h-screen"></div>
     </div>
   );
 }

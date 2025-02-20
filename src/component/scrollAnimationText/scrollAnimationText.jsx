@@ -5,13 +5,18 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const textArray = [
-  { text: "Renowned" },
-  { text: "Creative" },
-  { text: "Enginner" },
-];
+const animateStyles = {
+  top: {
+    start: "top 0%",
+    end: "bottom 60%",
+  },
+  end: {
+    start: "top 90%",
+    end: "bottom 100%",
+  },
+};
 
-export default function ScrollAnimationText() {
+export default function ScrollAnimationText({ textArray, animateData }) {
   let refs = useRef([]);
   const container = useRef(null);
 
@@ -27,8 +32,8 @@ export default function ScrollAnimationText() {
       scrollTrigger: {
         trigger: container.current,
         scrub: true,
-        start: "top 0%",
-        end: "bottom 60%",
+        start: animateStyles[animateData].start,
+        end: animateStyles[animateData].end,
       },
     });
 
@@ -38,9 +43,9 @@ export default function ScrollAnimationText() {
   return (
     <div
       ref={container}
-      className="w-full h-full flex justify-center items-center"
+      className="w-full h-full flex justify-center md:justify-start items-center md:items-start"
     >
-      <div className="w-[90%] flex flex-wrap justify-start text-[40px] font-extrabold uppercase md:hidden">
+      <div className="w-[90%] flex flex-wrap justify-start text-[40px] md:text-8xl md:gap-y-14 md:gap-x-5 font-extrabold uppercase">
         {textArray.map((item, i) => (
           <div key={i} className="leading-[60px]">
             {item.text.split("").map((letter, index) => (
