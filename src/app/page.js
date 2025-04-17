@@ -18,17 +18,20 @@ const textArray = [
 
 const data = [
   {
-    title: "javascript",
-    desc: [],
+    title: "Frontend Developer",
+    desc: "Specializing in creating responsive, interactive user interfaces using React, Next.js, and modern JavaScript frameworks",
   },
   {
-    title: "javascript",
+    title: "Backend Developer",
+    desc: "Building robust server-side applications, RESTful APIs, and database architectures",
   },
   {
-    title: "javascript",
+    title: "Full Stack Developer",
+    desc: "End-to-end development combining frontend and backend expertise for complete web solutions",
   },
   {
-    title: "javascript",
+    title: "UI/UX Engineer",
+    desc: "Crafting intuitive user experiences with clean, modern designs and smooth interactions",
   },
 ];
 
@@ -110,14 +113,7 @@ export default function Home() {
                 <span className="text-3xl">{e.title}</span>
               </h3>
 
-              <p className="text-sm">
-                Proficient in JavaScript and frameworks like React JS, I build
-                interactive and dynamic web applications. My focus on clean,
-                maintainable code allows me to implement complex
-                functionalities, improve user interactivity, and create scalable
-                solutions, ensuring smooth performance and a better user
-                experience on all modern browsers.
-              </p>
+              <p className="text-sm">{e.desc}</p>
             </div>
           ))}
         </div>

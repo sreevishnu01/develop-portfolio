@@ -74,10 +74,10 @@ function HamburgerMenu() {
                 <div>
                   <a
                     target="_blank"
-                    href="https://twitter.com/AkogunOyindamo3"
+                    href="https://www.instagram.com/vishnu__p_unni/"
                     className="undeline-hover"
                   >
-                    Twitter
+                    Instagram
                   </a>
                 </div>
                 <div>
