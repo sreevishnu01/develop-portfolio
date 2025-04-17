@@ -5,7 +5,7 @@ import localfont from "next/font/local";
 import Curson from "@/component/Curson";
 import FooterSection from "@/component/FooterSection";
 
-const lexend = Lexend({ weight: "400", subsets: ["latin"] });
+const lexend = Lexend({ weight: ["100", "300", "400"], subsets: ["latin"] });
 
 const monument = localfont({
   src: [

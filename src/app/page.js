@@ -16,6 +16,22 @@ const textArray = [
   { text: "YOU" },
 ];
 
+const data = [
+  {
+    title: "javascript",
+    desc: [],
+  },
+  {
+    title: "javascript",
+  },
+  {
+    title: "javascript",
+  },
+  {
+    title: "javascript",
+  },
+];
+
 export default function Home() {
   useEffect(() => {
     // Initialize Lenis for smooth scrolling
@@ -36,52 +52,12 @@ export default function Home() {
 
       <Parallex />
 
-      {/* <div className="h-screen px-5 md:px-[70px] p-14">
-        <div className="w-[950px] md:text-8xl md:leading-[90px] font-extrabold uppercase ">
-          <ScrollAnimationText textArray={textArray} animateData="end" />
+      <div className="h-screen  p-14 flex items-center">
+        <div className="w-[950px] md:text-8xl md:leading-[90px] font-extrabold uppercase">
+          <h3>about</h3>
         </div>
 
-        <section className="max-w-[774px] leading-6 flex flex-col gap-4 text-black text-lg font-[lexend] mt-28">
-          <h2>Ahoy!</h2>
-
-          <p>
-            I&apos;m Vishnu, a software developer and full-stack engineer passionate
-            about building seamless digital experiences.
-          </p>
-          <p>
-            My expertise spans both front-end and back-end development, allowing
-            me to craft web applications that are not only visually appealing
-            but also scalable and high-performing. Whether it&apos;s designing sleek
-            user interfaces or optimizing backend logic, I thrive on solving
-            complex challenges with clean, efficient code.
-          </p>
-          <p>
-            As a self-taught programmer, coding has never been "just a job" for
-            me—it&apos;s a continuous journey of learning and growth. What started
-            with a simple "Hello World" has evolved into a deep passion for
-            developing high-quality applications that make an impact.
-          </p>
-          <p>
-            With over 5 years of experience, I specialize in modern web
-            technologies, system architecture, and building robust full-stack
-            solutions. I enjoy working across the stack, from crafting dynamic
-            front-end interfaces to designing scalable back-end systems.
-          </p>
-          <p>
-            When I’m not coding, you’ll find me exploring new tech trends,
-            working on side projects, or diving into the endless depths of
-            cyberspace.
-          </p>
-        </section>
-      </div> */}
-
-      <div className="h-screen bg-[#111111] p-14">
-        <div className="w-[950px] md:text-8xl md:leading-[90px] font-extrabold uppercase text-[#d6d6d6]">
-          <h3>What I can</h3>
-          <h3>Do For You</h3>
-        </div>
-
-        <section className="max-w-[774px] leading-6 flex flex-col gap-4 text-white text-lg font-[lexend] mt-14">
+        <section className="max-w-[774px] leading-7 flex flex-col gap-4 mt-14 text-sm font-normal uppercase">
           <h2>Ahoy!</h2>
 
           <p>
@@ -114,6 +90,37 @@ export default function Home() {
             cyberspace.
           </p>
         </section>
+      </div>
+
+      <div className="h-screen px-5 md:px-[70px] p-14 bg-[#222222]">
+        <div className="w-[950px] md:text-8xl md:leading-[90px] font-extrabold uppercase">
+          <h3 className="leading-[7rem] text-[#d6d6d6]">
+            What i can <br /> Do For you{" "}
+          </h3>
+        </div>
+
+        <div className="w-full grid grid-cols-2 gap-10 p-14">
+          {data.map((e, index) => (
+            <div
+              key={index}
+              className="h-fit max-w-[40rem] p-4 flex flex-col text-white bg-[#444] rounded-md"
+            >
+              <h3 className="text-3xl">
+                <span>0{index + 1}.</span>
+                <span className="text-3xl">{e.title}</span>
+              </h3>
+
+              <p className="text-sm">
+                Proficient in JavaScript and frameworks like React JS, I build
+                interactive and dynamic web applications. My focus on clean,
+                maintainable code allows me to implement complex
+                functionalities, improve user interactivity, and create scalable
+                solutions, ensuring smooth performance and a better user
+                experience on all modern browsers.
+              </p>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
