@@ -1,4 +1,5 @@
 "use client";
+import About from "@/component/home/About";
 import HeroSection from "@/component/home/HeroSection";
 import HorizontalScroll from "@/component/home/HorizontalScroll";
 import Parallex from "@/component/home/Parallex";
@@ -55,65 +56,31 @@ export default function Home() {
 
       <Parallex />
 
-      <div className="h-screen  p-14 flex items-center">
-        <div className="w-[950px] md:text-8xl md:leading-[90px] font-extrabold uppercase">
-          <h3>about</h3>
-        </div>
+      <About />
 
-        <section className="max-w-[774px] leading-7 flex flex-col gap-4 mt-14 text-sm font-normal uppercase">
-          <h2>Ahoy!</h2>
-
-          <p>
-            I&apos;m Vishnu, a software developer and full-stack engineer
-            passionate about building seamless digital experiences.
-          </p>
-          <p>
-            My expertise spans both front-end and back-end development, allowing
-            me to craft web applications that are not only visually appealing
-            but also scalable and high-performing. Whether it&apos;s designing
-            sleek user interfaces or optimizing backend logic, I thrive on
-            solving complex challenges with clean, efficient code.
-          </p>
-          <p>
-            As a self-taught programmer, coding has never been &quot;just a
-            job&quot; for me—it&apos;s a continuous journey of learning and
-            growth. What started with a simple &quot;Hello World&quot; has
-            evolved into a deep passion for developing high-quality applications
-            that make an impact.
-          </p>
-          <p>
-            With over 5 years of experience, I specialize in modern web
-            technologies, system architecture, and building robust full-stack
-            solutions. I enjoy working across the stack, from crafting dynamic
-            front-end interfaces to designing scalable back-end systems.
-          </p>
-          <p>
-            When I’m not coding, you’ll find me exploring new tech trends,
-            working on side projects, or diving into the endless depths of
-            cyberspace.
-          </p>
-        </section>
-      </div>
-
-      <div className="h-screen px-5 md:px-[70px] p-14 bg-[#222222]">
-        <div className="w-[950px] md:text-8xl md:leading-[90px] font-extrabold uppercase">
-          <h3 className="leading-[7rem] text-[#d6d6d6]">
+      <div className="min-h-screen px-4 sm:px-8 md:px-[70px] py-8 md:p-14 bg-[#222222]">
+        <div className="w-full md:w-[950px] text-4xl sm:text-6xl md:text-8xl font-extrabold uppercase">
+          <h3 className="leading-tight md:leading-[7rem] text-[#d6d6d6]">
             What i can <br /> Do For you{" "}
           </h3>
         </div>
 
-        <div className="w-full grid grid-cols-2 gap-10 p-14">
+        <div className="w-full grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-10 p-4 sm:p-8 md:p-14">
           {data.map((e, index) => (
             <div
               key={index}
-              className="h-fit max-w-[40rem] p-4 flex flex-col text-white bg-[#444] rounded-md"
+              className="h-fit w-full p-4 flex flex-col gap-2 text-white bg-[#444] rounded-md"
             >
-              <h3 className="text-3xl">
-                <span>0{index + 1}.</span>
-                <span className="text-3xl">{e.title}</span>
+              <h3 className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-2">
+                <span className="text-xl sm:text-2xl md:text-3xl">
+                  0{index + 1}.
+                </span>
+                <span className="text-xl sm:text-2xl md:text-3xl">
+                  {e.title}
+                </span>
               </h3>
 
-              <p className="text-sm">{e.desc}</p>
+              <p className="text-xs sm:text-sm">{e.desc}</p>
             </div>
           ))}
         </div>
