@@ -32,7 +32,7 @@ const data = [
   },
   {
     title: "UI/UX Engineer",
-    desc: "Crafting intuitive user experiences with clean, modern designs and smooth interactions",
+    desc: "Crafting intuitive user experiences with clean, modern designs and smooth interactions and also i can design a website",
   },
 ];
 
