@@ -3,7 +3,7 @@ import Image from "next/image";
 
 function About() {
   return (
-    <div className="min-h-screen p-4 sm:p-8 md:p-14 flex flex-col md:flex-row items-center justify-center gap-8 md:gap-14">
+    <div className="max-w-[1440px] mx-auto min-h-screen p-4 sm:p-8 md:p-14 flex flex-col md:flex-row items-center justify-center gap-8 md:gap-14">
       {/* Left Column */}
       <div className="flex flex-col items-start w-full md:w-[437px]">
         {/* Small Intro Box */}
@@ -18,7 +18,7 @@ function About() {
         {/* Image */}
         <div className="w-full flex justify-start">
           <Image
-            src="/about/me.png"
+            src="/about/me.jpg"
             alt="about"
             width={200}
             height={200}
