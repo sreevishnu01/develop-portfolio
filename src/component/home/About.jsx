@@ -1,15 +1,35 @@
 import React from "react";
+import Image from "next/image";
 
 function About() {
   return (
     <div className="min-h-screen p-4 sm:p-8 md:p-14 flex flex-col md:flex-row items-center justify-center gap-8 md:gap-14">
-      <div className="w-full md:w-[950px] text-4xl sm:text-5xl md:text-8xl md:leading-[90px] font-extrabold uppercase">
-        <h3>about</h3>
+      {/* Left Column */}
+      <div className="flex flex-col items-start w-full md:w-[437px]">
+        {/* Small Intro Box */}
+        <div className="text-[10px] p-2 mb-4 rounded w-[300px]">
+          I'm a software developer and full-stack engineer passionate about
+          building seamless digital experiences.
+        </div>
+        {/* Large ABOUT Heading */}
+        <h1 className="text-[69px] font-extrabold uppercase leading-none mb-4">
+          About
+        </h1>
+        {/* Image */}
+        <div className="w-full flex justify-start">
+          <Image
+            src="/about/me.png"
+            alt="about"
+            width={200}
+            height={200}
+            className="rounded"
+          />
+        </div>
       </div>
 
-      <section className="w-full md:max-w-[774px] leading-6 sm:leading-7 flex flex-col gap-4 text-xs sm:text-sm font-normal uppercase">
+      {/* Right Column */}
+      <section className="w-full md:max-w-[950px] flex flex-col justify-center gap-4 text-xs sm:text-sm font-normal uppercase">
         <h2 className="text-lg sm:text-xl">Ahoy!</h2>
-
         <p>
           I&apos;m Vishnu, a software developer and full-stack engineer
           passionate about building seamless digital experiences.
