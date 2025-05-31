@@ -21,18 +21,22 @@ const data = [
   {
     title: "Frontend Developer",
     desc: "Specializing in creating responsive, interactive user interfaces using React, Next.js, and modern JavaScript frameworks",
+    img: "/el/front.png",
   },
   {
     title: "Backend Developer",
     desc: "Building robust server-side applications, RESTful APIs, and database architectures",
+    img: "/el/server.png",
   },
   {
     title: "Full Stack Developer",
     desc: "End-to-end development combining frontend and backend expertise for complete web solutions",
+    img: "/images/fullstack.jpg",
   },
   {
-    title: "UI/UX Engineer",
-    desc: "Crafting intuitive user experiences with clean, modern designs and smooth interactions and also i can design a website",
+    title: "DevOps Engineer",
+    desc: "Managing deployment pipelines, containerization with Docker, and cloud infrastructure on AWS and other platforms",
+    img: "/images/devops.jpg",
   },
 ];
 
@@ -59,28 +63,34 @@ export default function Home() {
       <About />
 
       <div className="min-h-screen px-4 sm:px-8 md:px-[70px] py-8 md:p-14 bg-[#222222]">
-        <div className="w-full md:w-[950px] text-4xl sm:text-6xl md:text-8xl font-extrabold uppercase">
+        {/* Section Title */}
+        <div className="w-full md:w-[950px] text-4xl sm:text-6xl md:text-8xl font-extrabold uppercase mb-10">
           <h3 className="leading-tight md:leading-[7rem] text-[#d6d6d6]">
-            What i can <br /> Do For you{" "}
+            What i can <br /> Do For you
           </h3>
         </div>
 
-        <div className="w-full grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-10 p-4 sm:p-8 md:p-14">
+        {/* Services List */}
+        <div className="w-full mx-auto divide-y divide-gray-400/40">
           {data.map((e, index) => (
             <div
               key={index}
-              className="h-fit w-full p-4 flex flex-col gap-2 text-white bg-[#444] rounded-md"
+              className="flex flex-col md:flex-row items-start md:items-center py-8 gap-4"
             >
-              <h3 className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-2">
-                <span className="text-xl sm:text-2xl md:text-3xl">
-                  0{index + 1}.
-                </span>
-                <span className="text-xl sm:text-2xl md:text-3xl">
-                  {e.title}
-                </span>
-              </h3>
-
-              <p className="text-xs sm:text-sm">{e.desc}</p>
+              {/* Number */}
+              <div className="w-12 text-lg font-mono text-gray-400 mb-2 md:mb-0">
+                {String(index + 1).padStart(2, "0")}.
+              </div>
+              {/* Title */}
+              <div className="flex-1 text-2xl sm:text-3xl font-bold text-white mb-2 md:mb-0">
+                {e.title.split(" / ").map((line, i) => (
+                  <div key={i}>{line}</div>
+                ))}
+              </div>
+              {/* Description */}
+              <div className="md:w-1/2 text-sm text-gray-300 font-light">
+                {e.desc}
+              </div>
             </div>
           ))}
         </div>
