@@ -8,7 +8,7 @@ function About() {
       <div className="flex flex-col items-start w-full md:w-[437px]">
         {/* Small Intro Box */}
         <div className="text-[10px] p-2 mb-4 rounded w-[300px]">
-          I'm a software developer and full-stack engineer passionate about
+          I&apos;m a software developer and full-stack engineer passionate about
           building seamless digital experiences.
         </div>
         {/* Large ABOUT Heading */}

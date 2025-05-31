@@ -38,7 +38,7 @@ export default function ScrollAnimationText({ textArray, animateData }) {
     });
 
     ScrollTrigger.refresh();
-  }, []);
+  }, [animateData]);
 
   return (
     <div

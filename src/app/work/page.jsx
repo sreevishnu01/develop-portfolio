@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 const works = [
   {
@@ -76,9 +77,11 @@ const WorkPage = () => {
         {[...works].reverse().map((work, idx) => (
           <div key={idx} className="flex flex-col">
             <div className="aspect-square w-full rounded-2xl overflow-hidden mb-3">
-              <img
+              <Image
                 src={work.img}
                 alt={work.title}
+                width={600}
+                height={600}
                 className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
               />
             </div>

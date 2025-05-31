@@ -6,20 +6,20 @@ export default function MagneticGSAP({ children, move }) {
   const magnetic = useRef(null);
 
   useEffect(() => {
-    const xTo = gsap.quickTo(magnetic.current, "x", {
+    const node = magnetic.current;
+    const xTo = gsap.quickTo(node, "x", {
       duration: move ? 0.5 : 1, // Faster duration when 'move' is true
       ease: "elastic.out(1, 0.5)", // Adjusted for a more spring-like effect
     });
 
-    const yTo = gsap.quickTo(magnetic.current, "y", {
+    const yTo = gsap.quickTo(node, "y", {
       duration: move ? 0.5 : 1, // Faster duration when 'move' is true
       ease: "elastic.out(1, 0.5)", // Adjusted for a more spring-like effect
     });
 
     const mouseMove = (e) => {
       const { clientX, clientY } = e;
-      const { height, width, left, top } =
-        magnetic.current.getBoundingClientRect();
+      const { height, width, left, top } = node.getBoundingClientRect();
 
       // Define the multiplier for speed and distance when move is true
       const multiplier = move ? 1.5 : 1; // Increase this value for more speed and distance
@@ -32,7 +32,7 @@ export default function MagneticGSAP({ children, move }) {
     };
 
     const mouseLeave = (e) => {
-      gsap.to(magnetic.current, {
+      gsap.to(node, {
         x: 0,
         y: 0,
         duration: 1, // Duration of the animation
@@ -44,12 +44,12 @@ export default function MagneticGSAP({ children, move }) {
       yTo(0);
     };
 
-    magnetic.current.addEventListener("mousemove", mouseMove);
-    magnetic.current.addEventListener("mouseleave", mouseLeave);
+    node.addEventListener("mousemove", mouseMove);
+    node.addEventListener("mouseleave", mouseLeave);
 
     return () => {
-      magnetic.current?.removeEventListener("mousemove", mouseMove);
-      magnetic.current?.removeEventListener("mouseleave", mouseLeave);
+      node.removeEventListener("mousemove", mouseMove);
+      node.removeEventListener("mouseleave", mouseLeave);
     };
   }, [move]);
 
