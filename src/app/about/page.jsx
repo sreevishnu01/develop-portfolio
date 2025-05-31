@@ -23,7 +23,7 @@ const AboutPage = () => {
   const experiences = [
     {
       location: "Dubai",
-      date: "Apr, 2024 – Current",
+      date: "Mar, 2025 – Current",
       title: "Senior Software Developer, Richy Life Club",
       desc: "At Richy Life Club, I lead the backend development and system architecture for our core member-focused application. My responsibilities include designing and implementing scalable REST APIs, integrating third-party services such as PayPal, FCM, and secure authentication systems including OTP and device-based login tracking.I've implemented real-time logging and monitoring to track user activity and system behavior across environments, helping us quickly identify and resolve issues. I also worked on caching strategies using Redis, load and stress testing with tools like Locust and k6, and optimizing backend performance for high traffic.Key features I've built include a flexible referral system, a room booking engine with availability logic, and a notification utility that handles both email and FCM push messages. I collaborate closely with our development team to ensure code quality, mentor junior developers, and maintain a high standard of security, performance, and scalability across our services.Additionally, I contribute to DevOps and CI/CD improvements, ensuring smooth deployment pipelines and system reliability as our platform grows.",
       link: "#",
@@ -31,9 +31,17 @@ const AboutPage = () => {
     },
     {
       location: "Dubai",
-      date: "Apr, 2024 – Current",
-      title: "Senior Software Developer, Richy Life Club",
-      desc: "At Richy Life Club, I lead the backend development and system architecture for our core member-focused application. My responsibilities include designing and implementing scalable REST APIs, integrating third-party services such as PayPal, FCM, and secure authentication systems including OTP and device-based login tracking.I've implemented real-time logging and monitoring to track user activity and system behavior across environments, helping us quickly identify and resolve issues. I also worked on caching strategies using Redis, load and stress testing with tools like Locust and k6, and optimizing backend performance for high traffic.Key features I've built include a flexible referral system, a room booking engine with availability logic, and a notification utility that handles both email and FCM push messages. I collaborate closely with our development team to ensure code quality, mentor junior developers, and maintain a high standard of security, performance, and scalability across our services.Additionally, I contribute to DevOps and CI/CD improvements, ensuring smooth deployment pipelines and system reliability as our platform grows.",
+      date: "Apr, 2023 – Apr, 2025",
+      title: "Software Developer, Richy Life Club",
+      desc: "At Richy Life Club, I focused on frontend development, creating dynamic and responsive web applications. I built the Emireum Properties website with comprehensive property listing features, search functionality, and property details pages. I also developed the Emireum Business portfolio website, implementing modern UI components and smooth animations. For Richy Life Club's main website, I created an engaging user interface with interactive elements and optimized performance. My work involved using React, Next.js, and modern frontend technologies to deliver seamless user experiences across all these projects. I collaborated closely with designers to implement pixel-perfect layouts and ensure responsive design across all devices.",
+      link: "#",
+      linkLabel: "Visit Link",
+    },
+    {
+      location: "Dubai",
+      date: "Feb, 2022 – Feb, 2023",
+      title: "web Developer, Dvine Intervention Entertainment",
+      desc: "At Dvine Intervention Entertainment, I focused on frontend development, creating dynamic and responsive web applications. I built the Dvine Intervention Entertainment website with comprehensive property listing features, search functionality, and property details pages. I also developed the Dvine Intervention Entertainment portfolio website, implementing modern UI components and smooth animations. For Dvine Intervention Entertainment's main website, I created an engaging user interface with interactive elements and optimized performance. My work involved using React, Next.js, and modern frontend technologies to deliver seamless user experiences across all these projects. I collaborated closely with designers to implement pixel-perfect layouts and ensure responsive design across all devices.",
       link: "#",
       linkLabel: "Visit Link",
     },
