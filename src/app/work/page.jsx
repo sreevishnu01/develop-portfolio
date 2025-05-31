@@ -50,16 +50,16 @@ const works = [
     link: "https://richylifeclub.com/",
   },
   {
-    img: "/images/9.jpg",
-    title: "Swippy - Car Rental",
-    subtitle: "App Design",
-    link: "#",
+    img: "/work/citysolar.png",
+    title: "City Solar",
+    subtitle: "Web site",
+    link: "https://www.citysolar.ae/",
   },
   {
-    img: "/images/10.jpg",
-    title: "Rummy Verse",
-    subtitle: "App Design",
-    link: "#",
+    img: "/work/nanis.png",
+    title: "Nanis ai",
+    subtitle: "Web application",
+    link: "https://nanisweb.vercel.app/",
   },
 ];
 
@@ -73,7 +73,7 @@ const WorkPage = () => {
         </h2> */}
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
-        {works.map((work, idx) => (
+        {[...works].reverse().map((work, idx) => (
           <div key={idx} className="flex flex-col">
             <div className="aspect-square w-full rounded-2xl overflow-hidden mb-3">
               <img
@@ -93,6 +93,8 @@ const WorkPage = () => {
               </div>
               <a
                 href={work.link}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="ml-2 w-8 h-8 flex items-center justify-center rounded-full border border-gray-300 hover:bg-gray-100 transition"
               >
                 <span className="text-xl">→</span>
