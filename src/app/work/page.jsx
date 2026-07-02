@@ -89,10 +89,10 @@ const works = [
 ];
 
 const WorkPage = () => {
-  const [layoutMode, setLayoutMode] = useState("grid"); // 'grid' | 'list'
+  const [layoutMode, setLayoutMode] = useState("list"); // 'grid' | 'list'
   const [filter, setFilter] = useState("all"); // 'all' | 'website' | 'app'
   const [hoveredIdx, setHoveredIdx] = useState(null);
-  
+
   const previewRef = useRef(null);
   const containerRef = useRef(null);
 
@@ -153,7 +153,7 @@ const WorkPage = () => {
 
   return (
     <div ref={containerRef} className="min-h-screen bg-[#121212] text-white pt-32 pb-24 px-5 md:px-[70px] select-none">
-      
+
       {/* Floating Preview Container for List View */}
       {layoutMode === "list" && (
         <div
@@ -198,11 +198,10 @@ const WorkPage = () => {
               <button
                 key={cat}
                 onClick={() => setFilter(cat)}
-                className={`px-4 py-2 rounded-full uppercase transition duration-300 ${
-                  filter === cat
+                className={`px-4 py-2 rounded-full uppercase transition duration-300 ${filter === cat
                     ? "bg-white text-black font-semibold shadow"
                     : "text-gray-400 hover:text-white"
-                }`}
+                  }`}
               >
                 {cat === "all" ? "All" : cat === "website" ? "Websites" : "Web Apps"}
               </button>
@@ -213,22 +212,20 @@ const WorkPage = () => {
           <div className="flex bg-neutral-900 border border-white/5 p-1 rounded-full text-xs font-mono">
             <button
               onClick={() => setLayoutMode("grid")}
-              className={`p-2 rounded-full transition duration-300 ${
-                layoutMode === "grid"
+              className={`p-2 rounded-full transition duration-300 ${layoutMode === "grid"
                   ? "bg-white text-black shadow"
                   : "text-gray-400 hover:text-white"
-              }`}
+                }`}
               title="Grid View"
             >
               <Grid size={16} />
             </button>
             <button
               onClick={() => setLayoutMode("list")}
-              className={`p-2 rounded-full transition duration-300 ${
-                layoutMode === "list"
+              className={`p-2 rounded-full transition duration-300 ${layoutMode === "list"
                   ? "bg-white text-black shadow"
                   : "text-gray-400 hover:text-white"
-              }`}
+                }`}
               title="List View"
             >
               <List size={16} />
@@ -262,7 +259,7 @@ const WorkPage = () => {
                   />
                   {/* Subtle Dark Vignette & Hover Glassmorphic Overlay */}
                   <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors duration-500"></div>
-                  
+
                   {/* Interactive Button Float */}
                   <div className="absolute bottom-6 right-6 w-12 h-12 rounded-full bg-white text-black flex items-center justify-center opacity-0 translate-y-3 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 shadow-xl">
                     <ArrowUpRight size={20} />
@@ -311,7 +308,7 @@ const WorkPage = () => {
               >
                 {/* Background Hover Highlight */}
                 <div className="absolute inset-0 -mx-5 bg-white/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none rounded-xl"></div>
-                
+
                 {/* Title & Subtitle */}
                 <div className="relative flex items-baseline gap-6 md:w-1/2">
                   <span className="text-xs font-mono text-gray-600">
