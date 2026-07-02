@@ -86,6 +86,14 @@ const works = [
     category: "app",
     tags: ["Next.js", "AI Integration", "Tailwind CSS", "WebSockets"],
   },
+  {
+    img: "/work/lena.png",
+    title: "Leena Lashes",
+    subtitle: "Lashes E-commerce Website",
+    link: "https://leenalashes.com/",
+    category: "website",
+    tags: ["shopify"],
+  },
 ];
 
 const WorkPage = () => {
@@ -199,8 +207,8 @@ const WorkPage = () => {
                 key={cat}
                 onClick={() => setFilter(cat)}
                 className={`px-4 py-2 rounded-full uppercase transition duration-300 ${filter === cat
-                    ? "bg-white text-black font-semibold shadow"
-                    : "text-gray-400 hover:text-white"
+                  ? "bg-white text-black font-semibold shadow"
+                  : "text-gray-400 hover:text-white"
                   }`}
               >
                 {cat === "all" ? "All" : cat === "website" ? "Websites" : "Web Apps"}
@@ -213,8 +221,8 @@ const WorkPage = () => {
             <button
               onClick={() => setLayoutMode("grid")}
               className={`p-2 rounded-full transition duration-300 ${layoutMode === "grid"
-                  ? "bg-white text-black shadow"
-                  : "text-gray-400 hover:text-white"
+                ? "bg-white text-black shadow"
+                : "text-gray-400 hover:text-white"
                 }`}
               title="Grid View"
             >
@@ -223,8 +231,8 @@ const WorkPage = () => {
             <button
               onClick={() => setLayoutMode("list")}
               className={`p-2 rounded-full transition duration-300 ${layoutMode === "list"
-                  ? "bg-white text-black shadow"
-                  : "text-gray-400 hover:text-white"
+                ? "bg-white text-black shadow"
+                : "text-gray-400 hover:text-white"
                 }`}
               title="List View"
             >
