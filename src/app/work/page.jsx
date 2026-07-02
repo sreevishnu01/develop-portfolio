@@ -94,6 +94,14 @@ const works = [
     category: "website",
     tags: ["shopify"],
   },
+  {
+    img: "/work/hero.png",
+    title: "HERO PROTOCOL",
+    subtitle: "AI-Powered Automation App",
+    link: "https://www.hero-tech.xyz/",
+    category: "webapp",
+    tags: ["Next.js", "AI Integration", "Tailwind CSS", "WebSockets"],
+  },
 ];
 
 const WorkPage = () => {
