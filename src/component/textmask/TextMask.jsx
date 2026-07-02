@@ -43,16 +43,19 @@ function TextMask() {
 
     function onFirstMove(e) {
       window.removeEventListener("mousemove", onFirstMove);
+      if (!content) return;
+      const rect = content.getBoundingClientRect();
       gsap.set(".hidden-content", {
         autoAlpha: 1,
-        "--x": e.pageX,
-        "--y": e.pageY,
+        "--x": e.clientX - rect.left,
+        "--y": e.clientY - rect.top,
       });
 
       window.addEventListener("mousemove", (e) => {
-        if (!linkAnimated) {
-          yTo(e.pageY + 17);
-          xTo(e.pageX + 15);
+        if (!linkAnimated && content) {
+          const rect = content.getBoundingClientRect();
+          yTo(e.clientY - rect.top + 17);
+          xTo(e.clientX - rect.left + 15);
         }
       });
     }
@@ -60,7 +63,7 @@ function TextMask() {
 
   return (
     <div className="h-full z-20 hidden md:block font-extrabold">
-      <div className="content w-full h-full flex justify-center items-center text-[90px]">
+      <div id="content" className="content w-full h-full flex justify-center items-center text-[90px]">
         <div className="leading-[90px] hiden-text w-[800px] overflow-visible py-5">
           <div>
             <p id="n-hover-cursor-text2" className="text-sm w-fit uppercase ">

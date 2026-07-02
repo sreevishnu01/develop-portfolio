@@ -20,6 +20,9 @@ export default function ScrollAnimationText({ textArray, animateData }) {
   let refs = useRef([]);
   const container = useRef(null);
 
+  // Reset refs on each render to prevent memory leak and element accumulation
+  refs.current = [];
+
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
 
@@ -52,7 +55,9 @@ export default function ScrollAnimationText({ textArray, animateData }) {
               <span
                 key={index}
                 className="inline-block opacity-20"
-                ref={(el) => refs.current.push(el)}
+                ref={(el) => {
+                  if (el) refs.current.push(el);
+                }}
               >
                 {letter}
               </span>

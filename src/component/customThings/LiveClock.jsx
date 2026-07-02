@@ -2,9 +2,13 @@
 import React, { useState, useEffect } from "react";
 
 function LiveClock() {
-  const [time, setTime] = useState(new Date());
+  const [mounted, setMounted] = useState(false);
+  const [time, setTime] = useState(null);
 
   useEffect(() => {
+    setMounted(true);
+    setTime(new Date());
+
     const tick = () => {
       setTime(new Date());
     };
@@ -13,6 +17,14 @@ function LiveClock() {
 
     return () => clearInterval(interval);
   }, []);
+
+  if (!mounted || !time) {
+    return (
+      <div className="flex justify-between">
+        <span>--:-- --</span>
+      </div>
+    );
+  }
 
   // Custom time formatting
   const hours = time.getHours() % 12 || 12;

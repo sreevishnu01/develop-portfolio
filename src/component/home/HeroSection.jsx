@@ -8,7 +8,7 @@ function HeroSection() {
   const textArray = [
     { text: "Renowned" },
     { text: "Creative" },
-    { text: "Enginner" },
+    { text: "Engineer" },
   ];
   return (
     <div className="h-screen relative">

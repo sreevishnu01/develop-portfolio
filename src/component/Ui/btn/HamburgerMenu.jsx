@@ -26,9 +26,8 @@ function HamburgerMenu() {
     <div>
       <MagneticGSAP>
         <div
-          className={`${
-            active && "active"
-          } fixed w-[20px] h-[20px] md:w-[50px] md:h-[50px] p-[25px] md:p-[30px] bg-white rounded-full bottom-10 right-5 md:right-[70px] cursor-pointer flex flex-col justify-center items-center mix-blend-difference z-[5]`}
+          className={`${active && "active"
+            } fixed w-[20px] h-[20px] md:w-[50px] md:h-[50px] p-[25px] md:p-[30px] bg-white rounded-full bottom-10 right-5 md:right-[70px] cursor-pointer flex flex-col justify-center items-center mix-blend-difference z-[5]`}
           // onClick={() => setActive((prev) => !prev)}
           onClick={handleClick}
         >
@@ -48,9 +47,8 @@ function HamburgerMenu() {
                   key={"navigation" + index}
                 >
                   <div
-                    className={`${
-                      currentPath === e.path && "h-3"
-                    } w-3  bg-white rounded-full absolute left-[-30px]`}
+                    className={`${currentPath === e.path && "h-3"
+                      } w-3  bg-white rounded-full absolute left-[-30px]`}
                   ></div>
                   <div className="undeline-hover">
                     <TransitionLink
@@ -104,7 +102,7 @@ function HamburgerMenu() {
           <svg
             // viewBox="0 0 705 1007"
             className="absolute top-0 left-[-99px] h-screen w-[100px] fill-[#292929] z-[4]"
-            // preserveAspectRatio="xMidYMid slice"
+          // preserveAspectRatio="xMidYMid slice"
           >
             <path
               id="start"
